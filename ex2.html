@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Pass Application Form</title>
+</head>
+<body>
+
+    <h1>Bus Pass Application Form</h1>
+
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Applicant Information</legend>
+            <table border="1">
+                <tr>
+                    <td><label for="fullName">Full Name:</label></td>
+                    <td><input type="text" id="fullName" name="fullName" required autocomplete="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required autocomplete="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890" autocomplete="tel"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Residential Address:</label></td>
+                    <td><textarea id="address" name="address" rows="4" cols="30" required autocomplete="street-address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Set Password:</label></td>
+                    <td><input type="password" id="password" name="password" autocomplete="new-password"></td>
+                </tr>
+                <tr>
+                    <td><label for="profilePicture">Upload Photo:</label></td>
+                    <td><input type="file" id="profilePicture" name="profilePicture" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td><label for="website">Personal Website/Blog (Optional):</label></td>
+                    <td><input type="url" id="website" name="website" placeholder="https://example.com" autocomplete="url"></td>
+                </tr>
+                <tr>
+                    <td><label for="passType">Type of Pass:</label></td>
+                    <td>
+                        <select id="passType" name="passType">
+                            <optgroup label="Student Passes">
+                                <option value="student_local">Student - Local Route</option>
+                                <option value="student_intercity">Student - Intercity</option>
+                            </optgroup>
+                            <optgroup label="General Passes">
+                                <option value="general_monthly">General - Monthly</option>
+                                <option value="general_annual">General - Annual</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="travelTime">Preferred Travel Time:</label></td>
+                    <td><input type="time" id="travelTime" name="travelTime"></td>
+                </tr>
+                <tr>
+                    <td><label for="busRoute">Bus Route (Select or Enter):</label></td>
+                    <td>
+                        <input list="busRoutes" id="busRoute" name="busRoute">
+                        <datalist id="busRoutes">
+                            <option value="Route A - Downtown Express">
+                            <option value="Route B - Northside Loop">
+                            <option value="Route C - University Shuttle">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fareRange">Fare Range Preference:</label></td>
+                    <td>
+                        <input type="range" id="fareRange" name="fareRange" min="0" max="100" value="50">
+                        <output for="fareRange" name="fareRangeOutput">50</output>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="favColor">Favorite Color (for pass design):</label></td>
+                    <td><input type="color" id="favColor" name="favColor"></td>
+                </tr>
+                <tr>
+                    <td>Hidden Field (for tracking):</td>
+                    <td><input type="hidden" id="applicationSource" name="applicationSource" value="online_form"></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td><input type="image" src="submit_button.png" alt="Submit Application" width="100" height="40"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit Application">
+                        <input type="reset" value="Reset Form">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <h2>Multimedia Section</h2>
+
+    <h3>Instructions:</h3>
+    <p>Please listen to the important announcements regarding bus services:</p>
+    <audio controls>
+        <source src="sample_audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p>Watch this short video explaining the bus pass application process:</p>
+    <video width="320" height="240" controls>
+        <source src="sample_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>Bus Depot Location</h2>
+    <p>Find our main bus depot location on the map:</p>
+    <!-- Replace the iframe src with the actual Google Maps embed code for your desired location -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQzJzM0LjkiTiA3NMKwMDAnNTUuNCJX!5e0!3m2!1sen!2sus!4v1627888888888!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+</html>

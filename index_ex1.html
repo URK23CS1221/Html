@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Pass Application Form</title>
+</head>
+<body>
+
+    <h1>Bus Pass Application</h1>
+
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Applicant Information</legend>
+            <table>
+                <tr>
+                    <td><label for="name">Full Name:</label></td>
+                    <td><input type="text" id="name" name="full_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="date_of_birth" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email_address"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone_number" pattern="[0-9]{10}" placeholder="e.g., 1234567890"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <select id="gender" name="gender">
+                            <option value="">--Select--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="id_proof">Upload ID Proof (PDF only):</label></td>
+                    <td><input type="file" id="id_proof" name="id_proof" accept=".pdf" required></td>
+                </tr>
+                <tr>
+                    <td><label for="fav_color">Favorite Color for Pass (Optional):</label></td>
+                    <td><input type="color" id="fav_color" name="favorite_color"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Bus Pass Details</legend>
+            <table>
+                <tr>
+                    <td><label for="pass_type">Pass Type:</label></td>
+                    <td>
+                        <select id="pass_type" name="pass_type" required>
+                            <optgroup label="Student Passes">
+                                <option value="student_monthly">Monthly Student</option>
+                                <option value="student_quarterly">Quarterly Student</option>
+                            </optgroup>
+                            <optgroup label="General Passes">
+                                <option value="general_monthly">Monthly General</option>
+                                <option value="general_yearly">Yearly General</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="start_date">Start Date:</label></td>
+                    <td><input type="date" id="start_date" name="pass_start_date"></td>
+                </tr>
+                <tr>
+                    <td><label for="end_time">Preferred Pick-up Time:</label></td>
+                    <td><input type="time" id="end_time" name="preferred_pickup_time"></td>
+                </tr>
+                <tr>
+                    <td><label for="travel_freq">Travel Frequency (Daily/Weekly):</label></td>
+                    <td><input type="range" id="travel_freq" name="travel_frequency" min="1" max="7" value="5"> (1=Rarely, 7=Daily) <output name="freq_output" for="travel_freq"></output></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Declaration</legend>
+            <p>
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label for="declaration">I declare that the information provided is true and accurate.</label>
+            </p>
+        </fieldset>
+
+        <input type="hidden" name="application_source" value="web_form">
+
+        <p>
+            <input type="submit" value="Apply for Bus Pass">
+            <input type="reset" value="Clear Form">
+        </p>
+
+    </form>
+
+    <hr>
+
+    <h2>Supporting Information</h2>
+    <h3>Important Announcement (Audio)</h3>
+    <audio controls>
+        <source src="sample_announcement.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Bus Routes Overview (Video)</h3>
+    <video width="640" height="360" controls>
+        <source src="sample_bus_routes.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <h3>Our Location (Google Map)</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQzJzA5LjciTiA3NMKwMDAnMzUuOSJF!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>
