@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 18px;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 16px;
+}
+main {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+h1, h2, h3, h4 {
+    color: #333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 18px;
+}
+img {
+    display: block;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+section {
+    margin-bottom: 25px;
+}
